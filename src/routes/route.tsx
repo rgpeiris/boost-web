@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Transaction } from "../pages/transaction";
  
-import ComingSoon from "../pages/ComingSoon";
-import PageNotFound from "../pages/PageNotFound";
+import ComingSoon from "../pages/comingSoon";
+import PageNotFound from "../pages/pageNotFound";
  
 const Navigator: React.FC = () => {
   return (

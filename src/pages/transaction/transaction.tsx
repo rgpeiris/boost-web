@@ -13,7 +13,7 @@ const Transaction: React.FC = () => {
       }}
     >
       <Typography align="center" variant="h5">
-        Transaction
+        TRANSACTION PAGE
       </Typography>
     </Box>
   );
