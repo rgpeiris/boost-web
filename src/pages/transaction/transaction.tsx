@@ -1,7 +1,11 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
  
-const Transaction: React.FC = () => {
+interface TransactionProps {
+  isMobile: boolean;
+}
+ 
+const Transaction: React.FC<TransactionProps> = ({ isMobile }) => {
   return (
     <Box
       sx={{
@@ -13,7 +17,7 @@ const Transaction: React.FC = () => {
       }}
     >
       <Typography align="center" variant="h5">
-        TRANSACTION PAGE
+        {isMobile ? "TRANSACTION MOBILE PAGE" : "TRANSACTION WEB PAGE" }
       </Typography>
     </Box>
   );
