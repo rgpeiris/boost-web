@@ -26,7 +26,7 @@ const Navigator: React.FC = () => {
       <Routes>
         {/* Routes which are accessible without authentication */}
         <Route element={<PublicRoutes />}>
-          <Route path="/" element={<ComingSoon />} />
+          <Route path="/" element={<ComingSoon isMobile={isMobile} />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
         {/* Routes which are accessible with authentication */}

@@ -1,7 +1,13 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+
+import { Assets } from "../assets/images";
+
+interface ComingSoonProps {
+  isMobile: boolean;
+}
  
-const ComingSoon: React.FC = () => {
+const ComingSoon: React.FC<ComingSoonProps> = ({ isMobile }) => {
   return (
     <Box
       sx={{
@@ -13,11 +19,21 @@ const ComingSoon: React.FC = () => {
         backgroundColor: "#f1f3f4"
       }}
     >
-      <Typography align="center" variant="h2" color="#ea0029">
-        WELCOME
-      </Typography>
-      <Typography align="center" variant="h5">
-        DuitNow OBW (Debiting Agent) 
+      <Box sx={{ display: "flex", flexDirection: "row" }}>
+        <img
+          src={Assets.common.duitnow_logo}
+          alt="duitnow-logo"
+          style={{
+            width: "64px",
+            height: "64px",
+          }}
+        />
+        <Typography align="center" variant="h2" color="#ec3067">
+          WELCOME
+        </Typography>
+      </Box>
+      <Typography align="center" variant="h6">
+        {isMobile ? "DuitNow OBW (Debiting Agent) MOBILE" : "DuitNow OBW (Debiting Agent) WEB"} 
       </Typography>
     </Box>
   );
