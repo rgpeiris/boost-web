@@ -13,7 +13,7 @@ const PageNotFound: React.FC = () => {
         backgroundColor: "#f1f3f4"
       }}
     >
-      <Typography align="center" variant="h1" color="#ea0029">
+      <Typography align="center" variant="h1" color="#ec3067">
         404
       </Typography>
       <Typography align="center" variant="h5">
