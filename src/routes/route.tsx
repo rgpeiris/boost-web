@@ -14,11 +14,9 @@ import { Transaction } from '../pages/transaction';
 const Navigator: React.FC = () => {
   /**
    * Check platform
-   * check using screen size (browser responsive), display mode (PWA installed method) or using user agent of browser
+   * Check using screen size (browser responsive)
    */
-  const isSmallScreen = useMediaQuery('(max-width:480px)');
-  const isStandalone = useMediaQuery('(display-mode: standalone)');
-  const isMobile = isSmallScreen || isStandalone || MobileBrowser;
+  const isMobile = useMediaQuery('(max-width:480px)') || MobileBrowser;
 
   return (
     <BrowserRouter>
