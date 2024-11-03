@@ -1,3 +1,7 @@
+import waveHand from './common/wave_hand/wave_hand.png';
+import duitnowLogo from './common/duitnow_logo/duitnow_logo.png';
+import boostBankLogo from './common/boost_bank_logo/boost_bank_logo.png';
+
 type AssetPaths = {
   [key: string]: string;
 };
@@ -8,8 +12,8 @@ interface AssetsProps {
 
 export const Assets: AssetsProps = {
   common: {
-    wave_hand: require('./common/wave_hand/wave_hand.png'),
-    duitnow_logo: require('./common/duitnow_logo/duitnow_logo.png'),
-    boost_bank_logo: require('./common/boost_bank_logo/boost_bank_logo.png'),
+    wave_hand: waveHand,
+    duitnow_logo: duitnowLogo,
+    boost_bank_logo: boostBankLogo,
   },
 };
