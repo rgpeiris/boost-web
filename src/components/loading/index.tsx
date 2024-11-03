@@ -1,12 +1,12 @@
-import React from "react";
-import { Box, CircularProgress } from "@mui/material";
+import React from 'react';
+import { Box, CircularProgress } from '@mui/material';
 
 const Loading: React.FC = () => {
   return (
     <Box
       sx={{
-        display: "flex",
-        justifyContent: "center",
+        display: 'flex',
+        justifyContent: 'center',
       }}
     >
       <CircularProgress />

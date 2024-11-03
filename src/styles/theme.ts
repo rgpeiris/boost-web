@@ -1,31 +1,31 @@
-import { createTheme, Theme } from "@mui/material/styles";
+import { createTheme, Theme } from '@mui/material/styles';
 
 const theme: Theme = createTheme({
   typography: {
-    fontFamily: ["Open Sans", "sans-serif"].join(","),
+    fontFamily: ['Open Sans', 'sans-serif'].join(','),
   },
   components: {
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
           borderRadius: 8,
-          "& fieldset.MuiOutlinedInput-notchedOutline": {
-            borderColor: "#C4C4C4",
+          '& fieldset.MuiOutlinedInput-notchedOutline': {
+            borderColor: '#C4C4C4',
           },
-          "&.Mui-focused": {
-            "& fieldset.MuiOutlinedInput-notchedOutline": {
-              borderColor: "#C4C4C4",
+          '&.Mui-focused': {
+            '& fieldset.MuiOutlinedInput-notchedOutline': {
+              borderColor: '#C4C4C4',
             },
           },
-          "&.Mui-error": {
-            "& fieldset.MuiOutlinedInput-notchedOutline": {
-              borderColor: "#C4C4C4",
+          '&.Mui-error': {
+            '& fieldset.MuiOutlinedInput-notchedOutline': {
+              borderColor: '#C4C4C4',
             },
           },
         },
         input: {
-          "&:-webkit-autofill": {
-            transition: "background-color 5000s ease-in-out 0s",
+          '&:-webkit-autofill': {
+            transition: 'background-color 5000s ease-in-out 0s',
           },
         },
       },
@@ -33,8 +33,8 @@ const theme: Theme = createTheme({
     MuiFormLabel: {
       styleOverrides: {
         asterisk: {
-          "&.Mui-error": {
-            color: "#8D8D8D",
+          '&.Mui-error': {
+            color: '#8D8D8D',
           },
         },
       },
@@ -42,11 +42,11 @@ const theme: Theme = createTheme({
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          "&.Mui-focused": {
-            color: "#8D8D8D",
+          '&.Mui-focused': {
+            color: '#8D8D8D',
           },
-          "&.Mui-error": {
-            color: "#8D8D8D",
+          '&.Mui-error': {
+            color: '#8D8D8D',
           },
         },
       },
@@ -55,17 +55,17 @@ const theme: Theme = createTheme({
       styleOverrides: {
         root: {
           p: 0,
-          minWidth: "18%",
-          color: "#C0183E",
-          "&.Mui-selected": {
-            borderBottom: "2px solid #c0183e",
-            backgroundColor: "#fff0f4",
-            "& .MuiBottomNavigationAction-label": {
-              fontSize: "12px",
-              fontWeight: "bold",
+          minWidth: '18%',
+          color: '#C0183E',
+          '&.Mui-selected': {
+            borderBottom: '2px solid #c0183e',
+            backgroundColor: '#fff0f4',
+            '& .MuiBottomNavigationAction-label': {
+              fontSize: '12px',
+              fontWeight: 'bold',
             },
-            "& .MuiSvgIcon-root, & .MuiBottomNavigationAction-label": {
-              color: "#C0183E",
+            '& .MuiSvgIcon-root, & .MuiBottomNavigationAction-label': {
+              color: '#C0183E',
             },
           },
         },
@@ -74,9 +74,9 @@ const theme: Theme = createTheme({
     MuiRadio: {
       styleOverrides: {
         root: {
-          color: "#C0183E",
-          "&.Mui-checked": {
-            color: "#C0183E",
+          color: '#C0183E',
+          '&.Mui-checked': {
+            color: '#C0183E',
           },
         },
       },

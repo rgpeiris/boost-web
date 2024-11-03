@@ -1,16 +1,16 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
- 
+import React from 'react';
+import { Box, Typography } from '@mui/material';
+
 const PageNotFound: React.FC = () => {
   return (
     <Box
       sx={{
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#f1f3f4"
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#f1f3f4',
       }}
     >
       <Typography align="center" variant="h1" color="#ec3067">
@@ -22,5 +22,5 @@ const PageNotFound: React.FC = () => {
     </Box>
   );
 };
- 
+
 export default PageNotFound;

@@ -2,12 +2,12 @@ import axios, {
   InternalAxiosRequestConfig,
   AxiosResponse,
   AxiosError,
-} from "axios";
+} from 'axios';
 
 /**
  * Common config
  */
-axios.defaults.headers.post["Content-Type"] = "application/json";
+axios.defaults.headers.post['Content-Type'] = 'application/json';
 axios.defaults.timeout = 10000;
 
 /**
@@ -22,7 +22,7 @@ const httpClient = axios.create({
  * @param request
  */
 const requestInterceptor = (
-  request: InternalAxiosRequestConfig
+  request: InternalAxiosRequestConfig,
 ): InternalAxiosRequestConfig => {
   // console.log(request);
   return request;

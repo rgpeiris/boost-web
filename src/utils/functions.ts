@@ -1,4 +1,4 @@
-import { MASK_STRING } from "./constants";
+import { MASK_STRING } from './constants';
 
 /**
  * Mask a string value, revealing only the last four characters.
@@ -11,5 +11,5 @@ export const maskString = (stringValue: string): string => {
     const mask = MASK_STRING + sliced;
     return mask;
   }
-  return "";
+  return '';
 };

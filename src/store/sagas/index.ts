@@ -1,5 +1,5 @@
-import { all } from "redux-saga/effects";
-import { SagaIterator } from "redux-saga";
+import { all } from 'redux-saga/effects';
+import { SagaIterator } from 'redux-saga';
 
 export default function* rootSaga(): SagaIterator {
   yield all([]);

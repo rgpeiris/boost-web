@@ -1,1 +1,1 @@
-export { default as Navigator } from "./route";
+export { default as Navigator } from './route';
