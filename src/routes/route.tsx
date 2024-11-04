@@ -9,6 +9,7 @@ import ScrollToTop from '../hooks/scrollToTop';
 
 import ComingSoon from '../pages/ComingSoon';
 import PageNotFound from '../pages/PageNotFound';
+import { Initial, Detail } from '../pages/auth';
 import { Transaction } from '../pages/transaction';
 
 const Navigator: React.FC = () => {
@@ -24,6 +25,8 @@ const Navigator: React.FC = () => {
       <Routes>
         {/* Routes which are accessible without authentication */}
         <Route element={<PublicRoutes />}>
+          <Route path="/initial/:initialId" element={<Initial />} />
+          <Route path="/detail/:detailId" element={<Detail />} />
           <Route path="/" element={<ComingSoon isMobile={isMobile} />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
