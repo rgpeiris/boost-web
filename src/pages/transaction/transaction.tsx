@@ -1,5 +1,10 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
+
+import CustomCard from '../../components/customCard';
+import Header from '../../components/header';
+
+import { Assets } from '../../assets/images';
 
 interface TransactionProps {
   isMobile: boolean;
@@ -9,16 +14,24 @@ const Transaction: React.FC<TransactionProps> = ({ isMobile }) => {
   return (
     <Box
       sx={{
-        height: '100vh',
+        flexGrow: 1,
         display: 'flex',
         flexDirection: 'column',
+        height: '100vh',
+        background: isMobile
+          ? '#ea0029'
+          : `url(${Assets.common.background_web}) center no-repeat`,
+        backgroundSize: 'cover',
         alignItems: 'center',
         justifyContent: 'center',
       }}
     >
-      <Typography align="center" variant="h5">
-        {isMobile ? 'TRANSACTION MOBILE PAGE' : 'TRANSACTION WEB PAGE'}
-      </Typography>
+      <CustomCard isMobile={isMobile}>
+        <Header
+          isMobile={isMobile}
+          title={'Authorise this transaction on Boost Bank App'}
+        />
+      </CustomCard>
     </Box>
   );
 };

@@ -10,7 +10,11 @@ import ScrollToTop from '../hooks/scrollToTop';
 import ComingSoon from '../pages/ComingSoon';
 import PageNotFound from '../pages/PageNotFound';
 import { Initial, Detail } from '../pages/auth';
-import { Transaction } from '../pages/transaction';
+import {
+  Transaction,
+  TransactionSuccess,
+  TransactionFail,
+} from '../pages/transaction';
 
 const Navigator: React.FC = () => {
   /**
@@ -35,6 +39,14 @@ const Navigator: React.FC = () => {
           <Route
             path="/transaction"
             element={<Transaction isMobile={isMobile} />}
+          />
+          <Route
+            path="/transaction-success"
+            element={<TransactionSuccess isMobile={isMobile} />}
+          />
+          <Route
+            path="/transaction-fail"
+            element={<TransactionFail isMobile={isMobile} />}
           />
         </Route>
       </Routes>
