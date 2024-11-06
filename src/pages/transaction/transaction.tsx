@@ -21,7 +21,8 @@ const Transaction: React.FC<TransactionProps> = ({ isMobile }) => {
         background: isMobile
           ? '#ea0029'
           : `url(${Assets.common.background_web}) center no-repeat`,
-        backgroundSize: 'cover',
+        backgroundColor: '#ea0029',
+        backgroundSize: 'contain',
         alignItems: 'center',
         justifyContent: 'center',
       }}
