@@ -13,7 +13,7 @@ const theme: Theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ['Open Sans', 'sans-serif'].join(','),
+    fontFamily: ['Maven Pro', 'sans-serif'].join(','),
   },
 });
 

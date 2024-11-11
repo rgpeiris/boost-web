@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
       sx={{
         fontSize: '20px',
         color: '#231F20',
-        fontWeight: '700',
+        fontWeight: '800',
       }}
     >
       {title}
