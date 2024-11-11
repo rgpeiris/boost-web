@@ -17,18 +17,20 @@ const CustomCard = React.forwardRef<HTMLDivElement, CustomCardProps>(
       <div
         ref={ref}
         style={{
-          borderRadius: isMobile ? '40px' : '20px',
-          backgroundColor: '#f3f4f4',
-          width: isMobile ? '350px' : '600px',
+          borderRadius: '24px',
+          backgroundColor: ' #F3F4F4',
+          width: isMobile ? '328px' : '548px',
+          minHeight: isMobile ? '605px' : '553px',
           ...style,
         }}
         onClick={onClick}
       >
         <div
           style={{
-            backgroundColor: '#f3f4f4',
-            padding: isMobile ? '15px 20px 15px 20px' : '15px 35px 15px 35px',
+            backgroundColor: '#F3F4F4',
+            padding: isMobile ? '15px 20px 15px 20px' : '15px 40px 15px 40px',
             borderRadius: isMobile ? '20px' : '20px',
+            height: '64px',
           }}
         >
           <Wrapper isMobile={isMobile} />
@@ -38,7 +40,7 @@ const CustomCard = React.forwardRef<HTMLDivElement, CustomCardProps>(
             backgroundColor: '#ffffff',
             padding: isMobile ? '20px' : '18px 35px',
             borderRadius: isMobile ? '15px' : '15px',
-            minHeight: '500px',
+            minHeight: isMobile ? '541px' : '489px',
           }}
         >
           {children}

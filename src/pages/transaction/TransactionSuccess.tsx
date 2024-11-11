@@ -29,7 +29,7 @@ const TransactionSuccess: React.FC<TransactionSuccessProps> = ({
       }}
     >
       <CustomCard isMobile={isMobile}>
-        <Header isMobile={isMobile} title={'Authorisation successful'} />
+        <Header title={'Authorisation successful'} />
         <Typography
           sx={{
             fontSize: isMobile ? '15px' : '16px',

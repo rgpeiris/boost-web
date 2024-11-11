@@ -27,7 +27,7 @@ const TransactionFail: React.FC<TransactionFailProps> = ({ isMobile }) => {
       }}
     >
       <CustomCard isMobile={isMobile}>
-        <Header isMobile={isMobile} title={'Authorisation unsuccessful'} />
+        <Header title={'Authorisation unsuccessful'} />
         <Typography
           sx={{
             fontSize: isMobile ? '15px' : '16px',

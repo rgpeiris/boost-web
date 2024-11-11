@@ -2,17 +2,16 @@ import React from 'react';
 import { Typography } from '@mui/material';
 
 interface HeaderProps {
-  isMobile: boolean;
   title: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ isMobile, title }) => {
+const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
     <Typography
       sx={{
-        fontSize: isMobile ? '20px' : '24px',
-        color: '#000000',
-        fontWeight: 'bold',
+        fontSize: '20px',
+        color: '#231F20',
+        fontWeight: '700',
       }}
     >
       {title}
