@@ -1,18 +1,39 @@
-import { createStore, applyMiddleware, Store } from 'redux';
-import { composeWithDevTools } from '@redux-devtools/extension';
-import createSagaMiddleware from 'redux-saga';
+import {
+  FLUSH,
+  PAUSE,
+  PURGE,
+  PERSIST,
+  REGISTER,
+  REHYDRATE,
+  persistStore,
+  persistReducer,
+} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import reducers, { RootState } from './reducers';
-import rootSaga from './sagas';
+import { authSlice } from './slices/authSlice';
 
-const sagaMiddleware = createSagaMiddleware();
+const persistConfig = { key: 'root', storage, whiteList: ['auth'] };
 
-const store: Store<RootState> = createStore(
-  reducers,
-  {},
-  composeWithDevTools(applyMiddleware(sagaMiddleware)),
-);
+const rootReducer = combineReducers({
+  auth: authSlice.reducer,
+});
 
-sagaMiddleware.run(rootSaga);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-export default store;
+export const store = configureStore({
+  reducer: persistedReducer,
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+});
+
+export const persistor = persistStore(store);
+
+// Infer the `RootState` and `AppDispatch` types from the store itself
+export type RootState = ReturnType<typeof store.getState>;
+// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
+export type AppDispatch = typeof store.dispatch;
