@@ -30,8 +30,9 @@ const TransactionFail: React.FC<TransactionFailProps> = ({ isMobile }) => {
         <Header title={'Authorisation unsuccessful'} />
         <Typography
           sx={{
-            fontSize: isMobile ? '15px' : '16px',
-            color: '#000000',
+            fontSize: '14px',
+            fontWeight: '400',
+            color: '#58595B',
             mt: '8px',
           }}
         >
@@ -40,7 +41,8 @@ const TransactionFail: React.FC<TransactionFailProps> = ({ isMobile }) => {
         <Typography
           sx={{
             fontSize: isMobile ? '12px' : '14px',
-            color: '#808080',
+            fontWeight: '400',
+            color: '#58595B',
             mt: '25px',
           }}
         >

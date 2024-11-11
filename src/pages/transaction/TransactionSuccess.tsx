@@ -32,8 +32,9 @@ const TransactionSuccess: React.FC<TransactionSuccessProps> = ({
         <Header title={'Authorisation successful'} />
         <Typography
           sx={{
-            fontSize: isMobile ? '15px' : '16px',
-            color: '#000000',
+            fontSize: '14px',
+            fontWeight: '400',
+            color: '#58595B',
             mt: '8px',
           }}
         >
@@ -42,7 +43,8 @@ const TransactionSuccess: React.FC<TransactionSuccessProps> = ({
         <Typography
           sx={{
             fontSize: isMobile ? '12px' : '14px',
-            color: '#808080',
+            fontWeight: '400',
+            color: '#58595B',
             mt: '25px',
           }}
         >
