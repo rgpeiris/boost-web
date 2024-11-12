@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 
 import CustomCard from '../../components/customCard';
 import Header from '../../components/header';
+import { ProgressButton } from '../../components/button';
 
 import { Assets } from '../../assets/images';
 
@@ -15,13 +16,16 @@ const TransactionFail: React.FC<TransactionFailProps> = ({ isMobile }) => {
     <Box
       sx={{
         flexGrow: 1,
+        overflow: 'auto',
         display: 'flex',
         flexDirection: 'column',
-        height: '100vh',
+        minHeight: '100vh',
+        height: '100%',
         background: isMobile
           ? '#ea0029'
           : `url(${Assets.common.background_web}) center no-repeat`,
-        backgroundSize: 'cover',
+        backgroundColor: '#ea0029',
+        backgroundSize: 'contain',
         alignItems: 'center',
         justifyContent: 'center',
       }}
@@ -48,6 +52,17 @@ const TransactionFail: React.FC<TransactionFailProps> = ({ isMobile }) => {
         >
           To keep you safe, automatic logout will occur shortly.
         </Typography>
+        <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            padding: isMobile ? '320px 0 10px 0' : '280px 0 10px 0',
+          }}
+        >
+          <ProgressButton title="Return to Merchant" />
+        </Box>
       </CustomCard>
     </Box>
   );

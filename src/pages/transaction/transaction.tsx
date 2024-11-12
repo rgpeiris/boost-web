@@ -1,8 +1,9 @@
 import React from 'react';
 import { Box, Typography, Divider, Grid } from '@mui/material';
 
-import CustomCard from '../../components/customCard';
 import Header from '../../components/header';
+import CustomCard from '../../components/customCard';
+import { TextButton } from '../../components/button';
 
 import { Assets } from '../../assets/images';
 
@@ -20,7 +21,6 @@ const Transaction: React.FC<TransactionProps> = ({ isMobile }) => {
         flexDirection: 'column',
         minHeight: '100vh',
         height: '100%',
-
         background: isMobile
           ? '#ea0029'
           : `url(${Assets.common.background_web}) center no-repeat`,
@@ -32,7 +32,7 @@ const Transaction: React.FC<TransactionProps> = ({ isMobile }) => {
     >
       <CustomCard
         isMobile={isMobile}
-        style={{ marginTop: '130px', marginBottom: '20px' }}
+        style={{ marginTop: isMobile ? '50px' : '130px', marginBottom: '20px' }}
       >
         <Header title={'Authorise this transaction on Boost Bank App'} />
         <Typography
@@ -198,6 +198,13 @@ const Transaction: React.FC<TransactionProps> = ({ isMobile }) => {
               Current/Saving
             </Typography>
           </Grid>
+        </Box>
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: '20px' }}>
+          <TextButton
+            title="Cancel Payment"
+            loading={false}
+            style={{ display: 'flex', justifyContent: 'flex-end' }}
+          />
         </Box>
       </CustomCard>
       <div
