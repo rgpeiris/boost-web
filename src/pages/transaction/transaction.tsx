@@ -3,6 +3,7 @@ import { Box, Typography, Divider, Grid } from '@mui/material';
 
 import Header from '../../components/header';
 import CustomCard from '../../components/customCard';
+import CountdownTimer from '../../components/countdownTimer';
 import { TextButton } from '../../components/button';
 
 import { Assets } from '../../assets/images';
@@ -43,7 +44,7 @@ const Transaction: React.FC<TransactionProps> = ({ isMobile }) => {
             mt: '8px',
           }}
         >
-          {'Time Remaining: '} <span style={{ fontWeight: '600' }}>04:59</span>
+          {'Time Remaining: '} <CountdownTimer />
         </Typography>
         <Box
           sx={{
